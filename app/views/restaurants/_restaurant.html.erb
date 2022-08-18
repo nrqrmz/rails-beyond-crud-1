@@ -14,8 +14,13 @@
     <%= '⭐' * restaurant.rating %>
   </p>
 
-  <p>
-    <%= link_to 'see chef', chef_restaurant_path(restaurant) %>
-  </p>
+  <div class="d-flex justify-content-between">
+    <p>
+      <%= link_to 'see chef', chef_restaurant_path(restaurant) %>
+    </p>
+    <p>
+      <%= link_to 'write review', new_restaurant_review_path(restaurant) %>
+    </p>
+  </div>
 
 </div>
