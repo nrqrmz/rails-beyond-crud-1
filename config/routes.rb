@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :restaurants do
+    resources :reviews, only: %i[new create]
+
     collection do
       get :top
     end
@@ -12,6 +14,5 @@ Rails.application.routes.draw do
       get :chef
     end
 
-    resources :reviews, only: [:new]
   end
 end
