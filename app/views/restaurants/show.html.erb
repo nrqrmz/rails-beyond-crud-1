@@ -1,4 +1,4 @@
-<div class="container col-4 mt-5">
+<div class="container col-6 mt-5">
   <p style="color: green"><%= notice %></p>
 
   <%= render @restaurant %>
@@ -6,7 +6,13 @@
   <p><strong>Reviews</strong></p>
   <ul class="list-group">
     <% @restaurant.reviews.each do |review| %>
-      <li class="list-group-item"><%= review.content %></li>
+      <li class="list-group-item d-flex justify-content-between">
+        <%= review.content %>
+        <%= link_to "Delete",
+          review_path(review),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+      </li>
     <% end %>
   </ul>
   <br>

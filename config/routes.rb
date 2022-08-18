@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     member do
       get :chef
     end
-
   end
+
+  resources :reviews, only: [:destroy]
 end
