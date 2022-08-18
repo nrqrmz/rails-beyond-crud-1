@@ -14,8 +14,9 @@ puts "Creating restaurants..."
 25.times do |i|
   Restaurant.create(
     name: Faker::Restaurant.name,
-    address: Faker::Address.street_name,
-    rating: rand(1..5)
+    address: Faker::Address.street_address,
+    rating: rand(1..5),
+    chef_name: Faker::Name.name
   )
   puts "Restaurant ##{i + 1} successfully created!"
 end
