@@ -1,9 +1,13 @@
-<h1>5 Stars Restaurants</h1>
-<div id="restaurants">
-  <% @restaurants.each do |restaurant| %>
-    <%= render restaurant %>
-    <p>
-      <%= link_to "Show this restaurant", restaurant %>
-    </p>
-  <% end %>
+<div class="container col-6 my-3">
+  <h1>5 Stars Restaurants</h1>
+  <div id="restaurants">
+    <% @restaurants.each do |restaurant| %>
+      <hr>
+      <%= render restaurant %>
+      <p>
+        <%= link_to "Show this restaurant", restaurant, class: "btn btn-primary" %>
+      </p>
+    <% end %>
+  </div>
+
 </div>
