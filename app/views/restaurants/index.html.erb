@@ -1,7 +1,10 @@
 <div class="container">
   <p style="color: green"><%= notice %></p>
 
-  <h1>Restaurants</h1>
+  <div class="d-flex justify-content-between">
+    <h1>Restaurants</h1>
+    <%= link_to "Top Restaurants (5 stars)", top_restaurants_path, class: "d-flex btn btn-primary align-items-center" %>
+  </div>
 
   <div id="restaurants">
     <% @restaurants.each do |restaurant| %>
